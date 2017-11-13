@@ -15,7 +15,7 @@ names(power) == c("Date", "Time", "Global_active_power", "Global_reactive_power"
                   "Voltage", "Global_intensity", 
                   "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 
-# keep data from 2007-02-01
+# keep data from 2007/02/01-2007/02/02
 power$Date <- as.Date(power$Date, "%d/%m/%Y")
 power <- power[power$Date %in% as.Date(c("1/2/2007", "2/2/2007"), "%d/%m/%Y"), ]
 
